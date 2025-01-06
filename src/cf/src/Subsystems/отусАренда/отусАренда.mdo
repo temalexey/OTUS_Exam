@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Subsystem xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="9009bf08-b684-4a52-a3be-1ac2abcd40f9">
+  <name>отусАренда</name>
+  <synonym>
+    <key>ru</key>
+    <value>Аренда</value>
+  </synonym>
+  <includeHelpInContents>true</includeHelpInContents>
+  <includeInCommandInterface>true</includeInCommandInterface>
+  <content>Document.отусЗаказКлиента</content>
+  <content>InformationRegister.отусСтоимостьДепозитаАренды</content>
+  <content>AccumulationRegister.отусВзаиморасчетыСКлиентами</content>
+  <content>Document.отусОплатаКлиента</content>
+  <content>AccumulationRegister.отусОстаткиИнструментов</content>
+  <content>Document.отусВводОстатковИнструмента</content>
+  <content>Document.отусВыдачаИнструментов</content>
+  <content>Catalog._ДемоМестаХранения</content>
+  <content>Catalog._ДемоНоменклатура</content>
+  <content>Catalog._ДемоКонтрагенты</content>
+  <content>Report.отусВзаиморасчетыСКлиентами</content>
+  <content>Report.отусДвиженияИнструментов</content>
+  <content>AccumulationRegister.отусВыданныеИнструменты</content>
+  <content>Document.отусВозвратИнструментов</content>
+  <content>Document.отусВозвратДепозита</content>
+  <content>Catalog._ДемоОрганизации</content>
+</mdclass:Subsystem>

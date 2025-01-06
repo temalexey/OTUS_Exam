@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Role xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="5071fefd-2606-4483-95f0-22ccce3d70d3">
+  <name>отусЧтениеРасценок</name>
+  <synonym>
+    <key>ru</key>
+    <value>Чтение Расценок</value>
+  </synonym>
+</mdclass:Role>

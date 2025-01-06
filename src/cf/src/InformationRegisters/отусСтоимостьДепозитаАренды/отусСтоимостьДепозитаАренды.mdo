@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="be16370e-436d-46e7-98c0-202864a835a3">
+  <producedTypes>
+    <selectionType typeId="ec95dcf2-147b-4094-98c6-04a637f3b031" valueTypeId="f7dda520-bb10-440d-ba01-41579bfc8daa"/>
+    <listType typeId="85d91452-0114-46b5-8cc7-c200c1ff899e" valueTypeId="473bbea3-c5d1-4556-8b30-00635f76d988"/>
+    <managerType typeId="e0c796cc-166a-4d05-8996-9f55f9f13e8e" valueTypeId="1a953660-fa62-4901-8052-8e5144828156"/>
+    <recordSetType typeId="010c0dda-8730-4357-8ac7-67938820f877" valueTypeId="3e1d3385-d109-4b3c-9b57-d18348960e8d"/>
+    <recordKeyType typeId="a88edbf8-d2c4-4efd-bb1d-0f38cf9b89bf" valueTypeId="ae1c8c28-7270-4442-af1a-26ecb3cc265e"/>
+    <recordType typeId="49ca63f8-b64f-45de-b3be-5c45bb090090" valueTypeId="c600796f-af70-4fa1-8647-5555845c4b7a"/>
+    <recordManagerType typeId="9d5c56e4-b731-4ddb-a36e-ebbc5b6d56b5" valueTypeId="8a8dd326-239a-4dea-9405-f702992dcce2"/>
+  </producedTypes>
+  <name>отусСтоимостьДепозитаАренды</name>
+  <synonym>
+    <key>ru</key>
+    <value>Стоимость депозита, аренды</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <informationRegisterPeriodicity>Day</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="eb4a5576-95f7-4770-818b-6a4acda23cdb">
+    <name>Депозит</name>
+    <synonym>
+      <key>ru</key>
+      <value>Депозит</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="b9850d70-cc74-4d5e-99cc-7d268bb9bb8f">
+    <name>Аренда</name>
+    <synonym>
+      <key>ru</key>
+      <value>Аренда</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="957309df-ab01-4eab-8f37-3dd148b1bd68">
+    <name>Инструмент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Инструмент</value>
+    </synonym>
+    <type>
+      <types>CatalogRef._ДемоНоменклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

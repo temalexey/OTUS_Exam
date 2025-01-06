@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="75745978-69fe-4fe5-830a-84ef1f6c07b7">
+  <producedTypes>
+    <objectType typeId="68f2b31b-ca54-40ad-9e99-ae93a2175507" valueTypeId="fd0f9ef2-ee1f-4fa8-a7bd-ae89e34e2f4b"/>
+    <managerType typeId="ba8ef710-9e86-402e-8c86-6af2bff4f19a" valueTypeId="b2bc099a-a2b3-406c-baad-0d754bf85d07"/>
+  </producedTypes>
+  <name>отусВзаиморасчетыСКлиентами</name>
+  <synonym>
+    <key>ru</key>
+    <value>Взаиморасчеты с клиентами</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>CommonForm.ФормаОтчета</defaultForm>
+  <mainDataCompositionSchema>Report.отусВзаиморасчетыСКлиентами.Template.ОсновнаяСхемаКомпоновкиДанных</mainDataCompositionSchema>
+  <defaultSettingsForm>CommonForm.ФормаНастроекОтчета</defaultSettingsForm>
+  <defaultVariantForm>CommonForm.ФормаВариантаОтчета</defaultVariantForm>
+  <templates uuid="24da7268-4a4a-4ca3-bcd5-46088ea8d7b9">
+    <name>ОсновнаяСхемаКомпоновкиДанных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Основная схема компоновки данных</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+</mdclass:Report>

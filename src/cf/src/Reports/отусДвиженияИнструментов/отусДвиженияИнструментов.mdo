@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="62c8b3e3-3f5b-468f-92f0-165d6d666a5b">
+  <producedTypes>
+    <objectType typeId="0f85513e-d46c-4721-88ec-5600a61a5a1c" valueTypeId="969cf2eb-3d53-4602-a2a2-90f4428be71d"/>
+    <managerType typeId="cb27fc3b-7afb-4d9e-9fd0-f1211f392906" valueTypeId="f437d090-b16e-4065-8c4b-afcc7c6b10b4"/>
+  </producedTypes>
+  <name>отусДвиженияИнструментов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Движения инструментов на складах</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>CommonForm.ФормаОтчета</defaultForm>
+  <mainDataCompositionSchema>Report.отусДвиженияИнструментов.Template.ОсновнаяСхемаКомпоновкиДанных</mainDataCompositionSchema>
+  <defaultSettingsForm>CommonForm.ФормаНастроекОтчета</defaultSettingsForm>
+  <defaultVariantForm>CommonForm.ФормаВариантаОтчета</defaultVariantForm>
+  <templates uuid="15961947-6c5a-4d9c-b25f-6b6e7460f060">
+    <name>ОсновнаяСхемаКомпоновкиДанных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Основная схема компоновки данных</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+</mdclass:Report>
