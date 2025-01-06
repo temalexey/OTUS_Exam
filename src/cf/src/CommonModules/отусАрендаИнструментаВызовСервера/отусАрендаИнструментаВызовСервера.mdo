@@ -6,6 +6,5 @@
     <value>Аренда инструмента</value>
   </synonym>
   <server>true</server>
-  <externalConnection>true</externalConnection>
   <serverCall>true</serverCall>
 </mdclass:CommonModule>
