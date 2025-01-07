@@ -23,4 +23,8 @@
   <content>Document.отусВозвратИнструментов</content>
   <content>Document.отусВозвратДепозита</content>
   <content>Catalog._ДемоОрганизации</content>
+  <content>EventSubscription.отусЗаписьСправочника</content>
+  <content>EventSubscription.отусЗаписьДокумента</content>
+  <content>CommonModule.отусАрендаИнструментаВызовСервера</content>
+  <subsystems>ИнтеграцияRMQ</subsystems>
 </mdclass:Subsystem>
