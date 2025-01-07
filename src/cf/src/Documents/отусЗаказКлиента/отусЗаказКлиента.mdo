@@ -132,7 +132,7 @@
     <name>КоличествоСутокАренды</name>
     <synonym>
       <key>ru</key>
-      <value>Количество суток аренды</value>
+      <value>Суток аренды</value>
     </synonym>
     <type>
       <types>Number</types>

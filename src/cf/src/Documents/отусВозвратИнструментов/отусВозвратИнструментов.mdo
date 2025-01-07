@@ -33,7 +33,6 @@
   <checkUnique>true</checkUnique>
   <autonumbering>true</autonumbering>
   <defaultObjectForm>Document.отусВозвратИнструментов.Form.ФормаДокумента</defaultObjectForm>
-  <registerRecords>AccumulationRegister.отусВзаиморасчетыСКлиентами</registerRecords>
   <registerRecords>AccumulationRegister.отусВыданныеИнструменты</registerRecords>
   <registerRecords>AccumulationRegister.отусОстаткиИнструментов</registerRecords>
   <postInPrivilegedMode>true</postInPrivilegedMode>
