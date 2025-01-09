@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c031da50-f703-4e73-9314-7fbf6f6a41dc">
+  <name>отусЗаписьСправочника</name>
+  <synonym>
+    <key>ru</key>
+    <value>Отус запись справочника</value>
+  </synonym>
+  <source>
+    <types>CatalogObject._ДемоНоменклатура</types>
+    <types>CatalogObject._ДемоОрганизации</types>
+    <types>CatalogObject._ДемоКонтрагенты</types>
+    <types>CatalogObject._ДемоМестаХранения</types>
+  </source>
+  <event>OnWrite</event>
+  <handler>CommonModule.отусОбменДаннымиRMQ.ЗаписьСправочникаПриЗаписи</handler>
+</mdclass:EventSubscription>

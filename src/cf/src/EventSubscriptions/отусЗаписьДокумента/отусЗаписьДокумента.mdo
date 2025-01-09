@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="fa21dd9d-c8bc-4359-b618-612aee3af444">
+  <name>отусЗаписьДокумента</name>
+  <synonym>
+    <key>ru</key>
+    <value>Отус запись документа</value>
+  </synonym>
+  <source>
+    <types>DocumentObject.отусВыдачаИнструментов</types>
+    <types>DocumentObject.отусВозвратДепозита</types>
+    <types>DocumentObject.отусОплатаКлиента</types>
+    <types>DocumentObject.отусЗаказКлиента</types>
+    <types>DocumentObject.отусВозвратИнструментов</types>
+  </source>
+  <event>OnWrite</event>
+  <handler>CommonModule.отусОбменДаннымиRMQ.ЗаписьДокументаПриЗаписи</handler>
+</mdclass:EventSubscription>

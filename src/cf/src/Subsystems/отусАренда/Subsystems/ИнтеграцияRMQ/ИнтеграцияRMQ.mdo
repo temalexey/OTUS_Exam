@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Subsystem xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="9097c8a2-059d-4b41-b080-1b964f1619ca">
+  <name>ИнтеграцияRMQ</name>
+  <synonym>
+    <key>ru</key>
+    <value>Интеграция RMQ</value>
+  </synonym>
+  <includeHelpInContents>true</includeHelpInContents>
+  <includeInCommandInterface>true</includeInCommandInterface>
+  <content>CommonModule.отусОбменДаннымиRMQ</content>
+  <content>CommonTemplate.отусPinkRabbitMQ</content>
+  <content>Constant.отусИмяОчередиЧтенияRMQ</content>
+  <content>Catalog.отусИсходящиеСообщенияRMQ</content>
+  <content>DataProcessor.отусМенеджерСообщенийRMQ</content>
+  <parentSubsystem>Subsystem.отусАренда</parentSubsystem>
+</mdclass:Subsystem>

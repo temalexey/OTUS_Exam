@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="a1e1afbf-1345-46d7-94fd-7e3719aeed56">
+  <producedTypes>
+    <objectType typeId="92c4ae9f-21f7-4d05-abc8-c328596805ef" valueTypeId="1a41b792-1f3f-4889-9fbc-eea2875a7b29"/>
+    <managerType typeId="c2c6b291-52bf-407b-afc0-9b0257e9c511" valueTypeId="57275ed8-7dac-4612-ae29-6ddc98bf6957"/>
+  </producedTypes>
+  <name>отусМенеджерСообщенийRMQ</name>
+  <synonym>
+    <key>ru</key>
+    <value>Менеджер сообщений RMQ</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.отусМенеджерСообщенийRMQ.Form.Форма</defaultForm>
+  <forms uuid="69d3fd8f-ebbe-4dc5-b7a0-d3196fc041dd">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DataProcessor>

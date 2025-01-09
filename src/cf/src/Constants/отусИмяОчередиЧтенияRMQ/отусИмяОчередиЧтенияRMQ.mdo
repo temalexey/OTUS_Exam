@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="73812c67-81bb-42c4-8e01-e2706034727d">
+  <producedTypes>
+    <managerType typeId="4672d544-f2a2-437a-a9f8-0c6d08630238" valueTypeId="3ee28acb-b879-481a-b999-187d93726171"/>
+    <valueManagerType typeId="7570c060-d943-42cf-8f2b-efb29b626506" valueTypeId="70d5fc4d-fc1b-41a3-bb72-eb18591be399"/>
+    <valueKeyType typeId="ff927c8d-4097-4935-bd7f-260ab31cca78" valueTypeId="6b78536f-9285-446e-87ec-5f09fb38b493"/>
+  </producedTypes>
+  <name>отусИмяОчередиЧтенияRMQ</name>
+  <synonym>
+    <key>ru</key>
+    <value>Имя очереди чтения RMQ</value>
+  </synonym>
+  <type>
+    <types>String</types>
+    <stringQualifiers>
+      <length>100</length>
+    </stringQualifiers>
+  </type>
+  <useStandardCommands>true</useStandardCommands>
+  <minValue xsi:type="core:UndefinedValue"/>
+  <maxValue xsi:type="core:UndefinedValue"/>
+  <dataLockControlMode>Managed</dataLockControlMode>
+</mdclass:Constant>

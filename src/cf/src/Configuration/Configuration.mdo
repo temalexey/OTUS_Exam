@@ -96,10 +96,10 @@
   <subsystems>Subsystem.Администрирование</subsystems>
   <subsystems>Subsystem.АдминистрированиеСервиса</subsystems>
   <subsystems>Subsystem.ИнтернетПоддержкаПользователей</subsystems>
+  <subsystems>Subsystem.отусАренда</subsystems>
   <subsystems>Subsystem.ПодключаемыеОтчетыИОбработки</subsystems>
   <subsystems>Subsystem.СтандартныеПодсистемы</subsystems>
   <subsystems>Subsystem.ТехнологияСервиса</subsystems>
-  <subsystems>Subsystem.отусАренда</subsystems>
   <styleItems>StyleItem.АктуальнаяПодпискаЦвет</styleItems>
   <styleItems>StyleItem.ВажнаяНадписьШрифт</styleItems>
   <styleItems>StyleItem.ВидДняПроизводственногоКалендаряВоскресеньеЦвет</styleItems>
@@ -961,6 +961,10 @@
   <roles>Role.НастройкаСинхронизацииФайлов</roles>
   <roles>Role.ОбновлениеКонфигурацииБазыДанных</roles>
   <roles>Role.ОтправкаSMS</roles>
+  <roles>Role.отусДобавлениеИзменениеЗаказовКлиента</roles>
+  <roles>Role.отусДобавлениеИзменениеРасценок</roles>
+  <roles>Role.отусЧтениеЗаказовКлиента</roles>
+  <roles>Role.отусЧтениеРасценок</roles>
   <roles>Role.ПередачаДанныхАнонимныйДоступ</roles>
   <roles>Role.ПодключениеИнтернетПоддержки</roles>
   <roles>Role.Подсистема_ДемоАдминистрирование</roles>
@@ -1017,10 +1021,6 @@
   <roles>Role.ЧтениеУчетныхЗаписейЭлектроннойПочты</roles>
   <roles>Role.ЧтениеШаблоновСообщений</roles>
   <roles>Role.ШифрованиеИРасшифровкаДанных</roles>
-  <roles>Role.отусДобавлениеИзменениеЗаказовКлиента</roles>
-  <roles>Role.отусЧтениеЗаказовКлиента</roles>
-  <roles>Role.отусДобавлениеИзменениеРасценок</roles>
-  <roles>Role.отусЧтениеРасценок</roles>
   <commonTemplates>CommonTemplate._ДемоОформлениеОтчетовБежевый</commonTemplates>
   <commonTemplates>CommonTemplate._ДемоПФ_ODT_СчетНаОплату_ru</commonTemplates>
   <commonTemplates>CommonTemplate.fresh</commonTemplates>
@@ -1040,6 +1040,7 @@
   <commonTemplates>CommonTemplate.ЛокализуемыеОбъектыДемоБСП</commonTemplates>
   <commonTemplates>CommonTemplate.МакетШтемпеляЭЦПOfficeOpen</commonTemplates>
   <commonTemplates>CommonTemplate.ОписаниеИзмененийСистемы</commonTemplates>
+  <commonTemplates>CommonTemplate.отусPinkRabbitMQ</commonTemplates>
   <commonTemplates>CommonTemplate.ПолучениеДереваОбработчиковОбновления</commonTemplates>
   <commonTemplates>CommonTemplate.ПустойМакетDOCX</commonTemplates>
   <commonTemplates>CommonTemplate.СоответствиеТэговОбщимФормам</commonTemplates>
@@ -1406,6 +1407,8 @@
   <commonModules>CommonModule.ОтправкаSMSЧерезБилайн</commonModules>
   <commonModules>CommonModule.ОтправкаSMSЧерезМТС</commonModules>
   <commonModules>CommonModule.ОтправкаSMSЧерезСМСУслуги</commonModules>
+  <commonModules>CommonModule.отусАрендаИнструментаВызовСервера</commonModules>
+  <commonModules>CommonModule.отусОбменДаннымиRMQ</commonModules>
   <commonModules>CommonModule.ОтчетОДвиженияхДокументаПереопределяемый</commonModules>
   <commonModules>CommonModule.ОтчетОДвиженияхДокументаСлужебныйКлиент</commonModules>
   <commonModules>CommonModule.ОтчетыКлиент</commonModules>
@@ -1806,7 +1809,6 @@
   <commonModules>CommonModule.ЭлектроннаяПодписьСлужебныйЛокализация</commonModules>
   <commonModules>CommonModule.ЭлектроннаяПодписьСлужебныйПовтИсп</commonModules>
   <commonModules>CommonModule.ЯндексПереводчик</commonModules>
-  <commonModules>CommonModule.отусАрендаИнструментаВызовСервера</commonModules>
   <commonAttributes>CommonAttribute.КомментарийЯзык1</commonAttributes>
   <commonAttributes>CommonAttribute.КомментарийЯзык2</commonAttributes>
   <commonAttributes>CommonAttribute.НаименованиеЯзык1</commonAttributes>
@@ -1994,6 +1996,8 @@
   <eventSubscriptions>EventSubscription.ОтключитьИспользованиеПланаОбмена</eventSubscriptions>
   <eventSubscriptions>EventSubscription.ОтключитьРассылкиПередУдалениемТипаПолучателейРассылки</eventSubscriptions>
   <eventSubscriptions>EventSubscription.ОтменитьОтправкуДанныхУзлаВРаспределеннойИнформационнойБазе</eventSubscriptions>
+  <eventSubscriptions>EventSubscription.отусЗаписьДокумента</eventSubscriptions>
+  <eventSubscriptions>EventSubscription.отусЗаписьСправочника</eventSubscriptions>
   <eventSubscriptions>EventSubscription.ОчиститьИнформациюОбАвтореВерсии</eventSubscriptions>
   <eventSubscriptions>EventSubscription.ОчиститьСсылкиНаУзелИнформационнойБазы</eventSubscriptions>
   <eventSubscriptions>EventSubscription.ПередУдалениемПланаОбмена</eventSubscriptions>
@@ -2566,6 +2570,7 @@
   <constants>Constant.ОтложенноеОбновлениеВГлавномУзлеЗавершеноУспешно</constants>
   <constants>Constant.ОтложенноеОбновлениеЗавершеноУспешно</constants>
   <constants>Constant.ОтправлятьПисьмаВФорматеHTML</constants>
+  <constants>Constant.отусИмяОчередиЧтенияRMQ</constants>
   <constants>Constant.ОценкаПроизводительностиПериодЗаписи</constants>
   <constants>Constant.ПараметрыАдминистрированияИБ</constants>
   <constants>Constant.ПараметрыАдресногоКлассификатора</constants>
@@ -2623,6 +2628,8 @@
   <constants>Constant.СтатусОбновленияКонфигурации</constants>
   <constants>Constant.ТипПодписиКриптографииПоУмолчанию</constants>
   <constants>Constant.ТипыИнцидентовЦККАктуальны</constants>
+  <constants>Constant.УдалитьЛогинДоступаКСервисуMorpher</constants>
+  <constants>Constant.УдалитьНастройкиВходаПользователей</constants>
   <constants>Constant.УсовершенствоватьПодписиАвтоматически</constants>
   <constants>Constant.УсовершенствоватьПодписиСДаты</constants>
   <constants>Constant.УстанавливатьПриоритетОбработкиДанныхВУказанномИнтервалеВремени</constants>
@@ -2634,8 +2641,6 @@
   <constants>Constant.ХранитьФайлыВТомахНаДиске</constants>
   <constants>Constant.ЧасовойПоясОбластиДанных</constants>
   <constants>Constant.ЭтоАвтономноеРабочееМесто</constants>
-  <constants>Constant.УдалитьЛогинДоступаКСервисуMorpher</constants>
-  <constants>Constant.УдалитьНастройкиВходаПользователей</constants>
   <commonForms>CommonForm._ДемоМоиНастройки</commonForms>
   <commonForms>CommonForm._ДемоПримечание</commonForms>
   <commonForms>CommonForm._ДемоФормаВыбораДополнительныхУсловий</commonForms>
@@ -2819,6 +2824,7 @@
   <catalogs>Catalog.ОбщиеВнешниеКомпоненты</catalogs>
   <catalogs>Catalog.ОбщиеДанныеИнформационногоЦентра</catalogs>
   <catalogs>Catalog.ОповещенияПользователей</catalogs>
+  <catalogs>Catalog.отусИсходящиеСообщенияRMQ</catalogs>
   <catalogs>Catalog.ОчередьЗаданий</catalogs>
   <catalogs>Catalog.ПапкиФайлов</catalogs>
   <catalogs>Catalog.ПапкиЭлектронныхПисем</catalogs>
@@ -2851,6 +2857,8 @@
   <catalogs>Catalog.ТелефонныйЗвонокПрисоединенныеФайлы</catalogs>
   <catalogs>Catalog.ТипыИнформацииИнформационногоЦентра</catalogs>
   <catalogs>Catalog.ТомаХраненияФайлов</catalogs>
+  <catalogs>Catalog.Удалить_ДемоОбщиеСведения</catalogs>
+  <catalogs>Catalog.УдалитьОчередьЗаданий</catalogs>
   <catalogs>Catalog.УслугиСервиса</catalogs>
   <catalogs>Catalog.УчетныеЗаписиDSS</catalogs>
   <catalogs>Catalog.УчетныеЗаписиСинхронизацииФайлов</catalogs>
@@ -2865,8 +2873,6 @@
   <catalogs>Catalog.ЭлектронноеПисьмоВходящееПрисоединенныеФайлы</catalogs>
   <catalogs>Catalog.ЭлектронноеПисьмоИсходящееПрисоединенныеФайлы</catalogs>
   <catalogs>Catalog.ЯзыкиПечатныхФорм</catalogs>
-  <catalogs>Catalog.Удалить_ДемоОбщиеСведения</catalogs>
-  <catalogs>Catalog.УдалитьОчередьЗаданий</catalogs>
   <documents>Document._ДемоЗаказПокупателя</documents>
   <documents>Document._ДемоКорректировкаОстатковТоваровВМестахХранения</documents>
   <documents>Document._ДемоНачислениеЗарплаты</documents>
@@ -2887,17 +2893,17 @@
   <documents>Document.ЗапланированноеВзаимодействие</documents>
   <documents>Document.НазначениеОпросов</documents>
   <documents>Document.ОтзывСогласияНаОбработкуПерсональныхДанных</documents>
+  <documents>Document.отусВводОстатковИнструмента</documents>
+  <documents>Document.отусВозвратДепозита</documents>
+  <documents>Document.отусВозвратИнструментов</documents>
+  <documents>Document.отусВыдачаИнструментов</documents>
+  <documents>Document.отусЗаказКлиента</documents>
+  <documents>Document.отусОплатаКлиента</documents>
   <documents>Document.СогласиеНаОбработкуПерсональныхДанных</documents>
   <documents>Document.СообщениеSMS</documents>
   <documents>Document.ТелефонныйЗвонок</documents>
   <documents>Document.ЭлектронноеПисьмоВходящее</documents>
   <documents>Document.ЭлектронноеПисьмоИсходящее</documents>
-  <documents>Document.отусВводОстатковИнструмента</documents>
-  <documents>Document.отусЗаказКлиента</documents>
-  <documents>Document.отусОплатаКлиента</documents>
-  <documents>Document.отусВыдачаИнструментов</documents>
-  <documents>Document.отусВозвратИнструментов</documents>
-  <documents>Document.отусВозвратДепозита</documents>
   <sequences>Sequence._ДемоДвижениеТоваров</sequences>
   <documentJournals>DocumentJournal._ДемоЖурналВсехДокументов</documentJournals>
   <documentJournals>DocumentJournal._ДемоСкладскиеДокументы</documentJournals>
@@ -3055,6 +3061,8 @@
   <reports>Report.КонтрольРассылкиОтчетов</reports>
   <reports>Report.МестаИспользованияСсылок</reports>
   <reports>Report.ОбъемНенужныхФайлов</reports>
+  <reports>Report.отусВзаиморасчетыСКлиентами</reports>
+  <reports>Report.отусДвиженияИнструментов</reports>
   <reports>Report.ОценкаПроизводительности</reports>
   <reports>Report.ПользователиПоПодразделениям</reports>
   <reports>Report.ПраваДоступа</reports>
@@ -3075,8 +3083,6 @@
   <reports>Report.УниверсальныйОтчет</reports>
   <reports>Report.УчастникиГруппДоступа</reports>
   <reports>Report.УчастникиГруппПользователей</reports>
-  <reports>Report.отусВзаиморасчетыСКлиентами</reports>
-  <reports>Report.отусДвиженияИнструментов</reports>
   <dataProcessors>DataProcessor._ДемоВводНаОснованииОприходованийТоваров</dataProcessors>
   <dataProcessors>DataProcessor._ДемоВыборОбъектовМетаданных</dataProcessors>
   <dataProcessors>DataProcessor._ДемоВыводСообщенийПользователю</dataProcessors>
@@ -3176,6 +3182,7 @@
   <dataProcessors>DataProcessor.ОбновлениеПрограммы</dataProcessors>
   <dataProcessors>DataProcessor.ОписаниеОбработчиковОбновления</dataProcessors>
   <dataProcessors>DataProcessor.ОтложеннаяЗаписьУзла</dataProcessors>
+  <dataProcessors>DataProcessor.отусМенеджерСообщенийRMQ</dataProcessors>
   <dataProcessors>DataProcessor.ОценкаПроизводительности</dataProcessors>
   <dataProcessors>DataProcessor.ПанельАдминистрированияБИП</dataProcessors>
   <dataProcessors>DataProcessor.ПанельАдминистрированияБСП</dataProcessors>
@@ -3368,6 +3375,7 @@
   <informationRegisters>InformationRegister.ОповещенияПользователейСертификатов</informationRegisters>
   <informationRegisters>InformationRegister.ОтветыНаВопросыАнкет</informationRegisters>
   <informationRegisters>InformationRegister.ОтправленныеСерверныеОповещения</informationRegisters>
+  <informationRegisters>InformationRegister.отусСтоимостьДепозитаАренды</informationRegisters>
   <informationRegisters>InformationRegister.ОчередьИзвлеченияТекста</informationRegisters>
   <informationRegisters>InformationRegister.ОчередьИнсталляцииПоставляемыхДополнительныхОтчетовИОбработокВОбластиДанных</informationRegisters>
   <informationRegisters>InformationRegister.ОчередьИнсталляцииПоставляемыхРасширенийВОбластиДанных</informationRegisters>
@@ -3453,6 +3461,16 @@
   <informationRegisters>InformationRegister.СубъектыДляСкрытияПерсональныхДанных</informationRegisters>
   <informationRegisters>InformationRegister.ТаблицыГруппДоступа</informationRegisters>
   <informationRegisters>InformationRegister.УведомленияОПрочтении</informationRegisters>
+  <informationRegisters>InformationRegister.УдалитьВерсииКлассификаторовОбластейДанных</informationRegisters>
+  <informationRegisters>InformationRegister.УдалитьДвоичныеДанныеФайлов</informationRegisters>
+  <informationRegisters>InformationRegister.УдалитьЗамерыВремени3</informationRegisters>
+  <informationRegisters>InformationRegister.УдалитьНастройкиТранспортаОбмена</informationRegisters>
+  <informationRegisters>InformationRegister.УдалитьОбластиПерсональныхДанных</informationRegisters>
+  <informationRegisters>InformationRegister.УдалитьПараметрыИнтернетПоддержкиПользователей</informationRegisters>
+  <informationRegisters>InformationRegister.УдалитьРезультатыОбменаДанными</informationRegisters>
+  <informationRegisters>InformationRegister.УдалитьСводныеПриложенияПорядокВыгрузкиОбъектов</informationRegisters>
+  <informationRegisters>InformationRegister.УдалитьСводныеПриложенияСостояниеВыгрузки</informationRegisters>
+  <informationRegisters>InformationRegister.УдалитьХранимыеФайлыВерсий</informationRegisters>
   <informationRegisters>InformationRegister.УдаляемыеОбъекты</informationRegisters>
   <informationRegisters>InformationRegister.УничтоженныеПерсональныеДанные</informationRegisters>
   <informationRegisters>InformationRegister.УровниСокращенийАдресныхСведений</informationRegisters>
@@ -3465,22 +3483,11 @@
   <informationRegisters>InformationRegister.ЧастиВыгрузкиЗагрузкиОбластейДанных</informationRegisters>
   <informationRegisters>InformationRegister.ЭлектронныеПодписи</informationRegisters>
   <informationRegisters>InformationRegister.ЭлектронныеПодписиМЧД</informationRegisters>
-  <informationRegisters>InformationRegister.УдалитьВерсииКлассификаторовОбластейДанных</informationRegisters>
-  <informationRegisters>InformationRegister.УдалитьДвоичныеДанныеФайлов</informationRegisters>
-  <informationRegisters>InformationRegister.УдалитьЗамерыВремени3</informationRegisters>
-  <informationRegisters>InformationRegister.УдалитьНастройкиТранспортаОбмена</informationRegisters>
-  <informationRegisters>InformationRegister.УдалитьОбластиПерсональныхДанных</informationRegisters>
-  <informationRegisters>InformationRegister.УдалитьПараметрыИнтернетПоддержкиПользователей</informationRegisters>
-  <informationRegisters>InformationRegister.УдалитьРезультатыОбменаДанными</informationRegisters>
-  <informationRegisters>InformationRegister.УдалитьСводныеПриложенияПорядокВыгрузкиОбъектов</informationRegisters>
-  <informationRegisters>InformationRegister.УдалитьСводныеПриложенияСостояниеВыгрузки</informationRegisters>
-  <informationRegisters>InformationRegister.УдалитьХранимыеФайлыВерсий</informationRegisters>
-  <informationRegisters>InformationRegister.отусСтоимостьДепозитаАренды</informationRegisters>
   <accumulationRegisters>AccumulationRegister._ДемоОборотыПоСчетамНаОплату</accumulationRegisters>
   <accumulationRegisters>AccumulationRegister._ДемоОстаткиТоваровВМестахХранения</accumulationRegisters>
   <accumulationRegisters>AccumulationRegister.отусВзаиморасчетыСКлиентами</accumulationRegisters>
-  <accumulationRegisters>AccumulationRegister.отусОстаткиИнструментов</accumulationRegisters>
   <accumulationRegisters>AccumulationRegister.отусВыданныеИнструменты</accumulationRegisters>
+  <accumulationRegisters>AccumulationRegister.отусОстаткиИнструментов</accumulationRegisters>
   <chartsOfCharacteristicTypes>ChartOfCharacteristicTypes._ДемоВидыСубконто</chartsOfCharacteristicTypes>
   <chartsOfCharacteristicTypes>ChartOfCharacteristicTypes.ВопросыДляАнкетирования</chartsOfCharacteristicTypes>
   <chartsOfCharacteristicTypes>ChartOfCharacteristicTypes.ДополнительныеРеквизитыИСведения</chartsOfCharacteristicTypes>
